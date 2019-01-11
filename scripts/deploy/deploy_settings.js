@@ -13,7 +13,7 @@ exports.get_deployment_settings = () => {
 exports.get_docker_settings = () => {
     let settings
     try {
-        settings = settings_script.get_deployment_settings()
+        settings = module.exports.get_deployment_settings()
     } catch (e) {
         return
     }
