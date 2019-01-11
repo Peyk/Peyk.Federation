@@ -24,4 +24,4 @@ FROM microsoft/dotnet:2.2-sdk AS solution-build
 ARG configuration=Debug
 WORKDIR /project/
 COPY . .
-RUN dotnet build Peyk.sln --configuration ${configuration}
+RUN dotnet build Peyk.Federation.sln --configuration ${configuration}
