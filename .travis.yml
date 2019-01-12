@@ -19,7 +19,7 @@ jobs:
       script: node scripts/build
       env:
         # DEPLOY_SETTINGS_JSON='{"CI":[{"type":"docker","options":{"user":"","pass":""}}]}'
-        - secure: PU5LQoySgtWN3wLRc/pHkhpOej2PQDL5Mv+xtoMYgdi9W9V3xBCyjtseKtJ+ZmDAR/jbQGyLQMWiHADTQcRpXS5kIj/e1rYw3VIJgVNxVee7mCjo3y+0ukQ0PszDeOZV9qSC80t2kyKUK0piWBZtedjaQw04ofOsS+Hdx1JijwcxG2fcCM1zCuSudotN/dAtnx/qLie72bdqhO28WEKGGjg/nLriwm3fYR+en2/z6u3BGhP0cUWCyI/fh9M0xKUNNVgjI/UBWfM9F0M/fqapx+CuMKWAFhUkj7dwhNVoEpYk4k7ffnj3OKJ9wQHkQ6RVqyr6JODwa8/G3rEnulkPeU+SP5T0qm2gUmuz6uyKFGi0PBTmWki1hmCOIffx6N20nXOJUAWb5JNl/IVH1MHuCI5hUR3Ek0mU6LzaQcre4hNzUGD7IahEep+mTXFZPrVNFRLoVhSQZFP1mXAKQYM5d6nwHxxgO/nMvsxTYfj8/y4Ic2OI9ruqgGjTyafPAbVZBm/V86J1qd1H4e7CREWOuHmS6l3yvkx2Avn/Qyk0pmzYPk4KYZESSWI++Y8DQEuI43u8lHpV1jpoclYzPmcXJHsb5KKQVNimT7eTc0dZUQWkZ9bTnfnTPW4CzpXotFYLU3TW+piylkg7sUMeCmMV7ypjVbwFA3bI0LKtWgOk+uo=
+        - secure: d22DceuLH7O13NIVQuizhMmaMHlbkVy9s0l8enLDZFsFH6tHfbxR6yQwX+328qQh/0il2LDkAXfcPLS/kE5vmR1z13WPHbYCBd79Z17ypBnq72lwomvUqsSO2gJG02DD3DQ7p6NZWIDudKejIUSsJd1BZ/zBFojBAL9XtrwgGmfIAkOPNjIt5RTZCYitLBdeYk5ZcV+f/0gzAq1d9IxJSDLMO9WGHTyUadXLeTaVYcdBib6O9hhok+n/ZV6c7nCir/HoQf7c3/AmtS07pKM/ctYJ86PqrUZ16L8vLeG239xIG3DGor7YtA9YNsveu92YnRaYuUdx463JVomycu6GO2rvOP6m0cZ1gczi9BnaH1ldpUdOISgIFv5MoDkXkfXqIqfkc2LdCciHuoGRu854AI2Bf/6EU5yztK9SCyDtidI7528/dxoJq9KkgnxvDiRpVlzYkx/7TNRR3md3IOkRj82FqwzhrB2U+ZBNdMLnvNdreES918auRa2xNPDVJ4sMwvU05Y/BoGuHFu4LeDlVYkERC1IYrOGDzapXIhmvXBlD3zviJpcARtL6IRySegCwi8fsyVVXkZE0GZZo2DEEUSH9e/PLjU/0/IIdOczIRq3J1XmoL8jePWJzVLMNQzUK2cFd3Bkqxvpo4xCn8G4cocru786rG8zwMofvJ2aAt9A=
 
     - stage: Test
       name: "Unit Tests"
@@ -38,7 +38,7 @@ jobs:
         #   {"type":"docker","options":{"source":"peyk/federation:unstable","target":"peyk/federation","user":"","pass":""}},
         #   {"type":"heroku","options":{"app":"peyk-federation","source":"peyk/federation","dyno":"web","user":"","token":""}}
         # ]}'
-        - secure: LRKotOb96HcopYl9ASZx/jj4iVdt1TPnSGvHLn3PJ9MKJLLbhudtpdoqv276LYWgwm4J52xGORxhIfLOC8+VmDfdLuQf3k7nDQj9cVWeL2TEdJAM9TsyFQWqkvdAfi+MsLgjJYj7HcIyRP83prsLYawJVG2sZxWxUKDmYdzEocyhuhmkxvmxTC9TSZOjpNK+tBNVRESfvPO+0RUPSLimGUZI+MyssRKg7GUmE9qtmYrouyhdTTvXsXzc3bIIT+w4/9+E7euhXwdo6wVTPJlaUFG0ZZEb0i6NBw33h8SJEAWqVK8nwG2QLH2839LDpcGBGkmQoIgISij6m9NW0FZ5sPiTsAEzxOsy3PWoDLzj9G409fYOQrBRjEN7zs7PjGOIGT2R2qRuJ/V1qrZCsbDLE+BJLVvqUhWDBURB7ALQqSV2MjdCv10M2P1ENRb/MWGOvTq+6v1QO4hlTKow5H2hmRSNiKe9zBVwQ55DBxL5Vi8kvtnUzV8gZbaZQssor2YWuKxKoPYEauXP2sTFU5rE5Kht+Hr4CNDTinOUWophbMABLZPYty/nHq5EbfEXdVjPhVRDZ+tI/rQi74W88sN6XMc/yByWkqFTuaXh6hIEz8Jc0UXU8y47QiI1tujJB9KHq1zOufvW62syJ16KxP9t303FlVQCXgk0gQYUq8IkQSk=
+        - secure: KT208p1fcR1gYLMbOsubGnkOpzUU/vrvrhwkOZ8JmAjpwHodSIUMrPrZv+k2ayNeM+rjmz7JipK/Uunu+CZhdtHSTejsYOWp4Mn8lgBq0k3a6tnXzm+dBMDjJ/ZtyNenxNUxLyN3GZEN7cDY7B4m/NRkj1fUNfgK7eDkr2DoaYIMGIyedfKDTZEhejEY4aL4wyTwmEAC3UWIJRNhiVJWRea3efzntXbDT+964X38j8TDHlISCWsVC9VecM2KcXjscDaaqHxxBb5UQ/UjbiCRiJiRHKmp0lKcvqCRAPEqTeH2C64NVE6qiBpf6RFPQsIuMBZqgVreymo1nx7bTMNhPE6e28BL57JvR9P2FAzpDiXh/qrpnzQFmlDMZ5DDl7fIZ0A4AMgyd8LiP9hO7MhoDgIlU5JwJTO/FGnICCKR71kZwDfm7+eOCY7hpdFp37WMQ6MgjkB4egSxK8txmHs50LMC4jGyIjfM0yj6As3CcbX+uT3VqLBkh+wY2gyi5e8RbR2IllzwkQtg8BnuBXpOdKsqnf8sqLGrsAx7HO2LaFJcQ+NPGQTi6kjbShHr+QV5lFFOEqELkrCKp9XMmteoBhaFYguGRoGuUuNvCHjGcSM51zD+Cq6vdQNdy80Xtj9REBJu9JfX99rkw1PXyf5ChToh9l8feeUUrhwLK/bGJmY=
 
       deploy:
         - provider: script
