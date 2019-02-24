@@ -1,0 +1,3 @@
+{
+  "ConnectionString": "mongodb://localhost:27017/peyk-federation-tests-mongo"
+}

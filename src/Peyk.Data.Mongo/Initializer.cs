@@ -28,12 +28,13 @@ namespace Peyk.Data.Mongo
                     .ConfigureAwait(false);
                 var roomsCollection = database.GetCollection<Room>(Constants.Collections.Rooms.Name);
 
-                // create unique index "room_id" on the field "id"
-                await roomsCollection.Indexes.CreateOneAsync(new CreateIndexModel<Room>(
-                        Builders<Room>.IndexKeys.Ascending(r => r.Id),
+                // create unique index "room_id" on the field "room_id"
+                await roomsCollection.Indexes.CreateOneAsync(
+                    new CreateIndexModel<Room>(
+                        Builders<Room>.IndexKeys.Ascending(r => r.RoomId),
                         new CreateIndexOptions
-                            {Name = Constants.Collections.Rooms.Indexes.RoomId, Unique = true}),
-                    cancellationToken: cancellationToken
+                            {Name = Constants.Collections.Rooms.Indexes.RoomId, Unique = true}
+                    ), cancellationToken: cancellationToken
                 ).ConfigureAwait(false);
             }
         }
@@ -47,7 +48,7 @@ namespace Peyk.Data.Mongo
             {
                 BsonClassMap.RegisterClassMap<Room>(map =>
                 {
-                    map.MapIdProperty(r => r.Id);
+                    map.AutoMap();
                     map.MapProperty(r => r.NumJoinedMembers).SetElementName("members_count");
                     map.MapProperty(r => r.CreatedAt).SetElementName("created_at");
                 });

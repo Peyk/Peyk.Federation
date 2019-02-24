@@ -11,9 +11,14 @@ namespace Peyk.Data.Entities
     public class Room
     {
         /// <summary>
-        /// Required. The ID of the room.
+        /// Entity's unique ID in the data storage 
         /// </summary>
         public string Id { get; set; }
+
+        /// <summary>
+        /// Required. The ID of the room.
+        /// </summary>
+        public string RoomId { get; set; }
 
         /// <summary>
         /// Required. The number of members joined to the room.

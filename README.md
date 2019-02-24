@@ -42,13 +42,15 @@ curl -X GET "http://localhost:8008/_matrix/client/r0/publicRooms"
 ## Repository Contents
 
 - `Peyk.Federation.sln`: .NET Solution
-- `src/`: Projects used in this micro-service
+- `src/`
   - `Peyk.Matrix.Models`: Contains the DTOs and the Entities in Matrix Protocol
   - `Peyk.Data.Entities`: Peyk data entities persisted in the storage
   - `Peyk.Data.Mongo`: Peyk entity repository implementation for MongoDB
   - `Peyk.Federation.Ops.Query`: Federation API operations for querying(read-only) data
   - `Peyk.Federation.Web`: Web API implementation for the Federation HTTP protocol
 - `test/`
+  - `Framework`: Contains a set of common utilities for the xUnit framework shared between the test projects
+  - `MongoTests`: Systems integration tests for the MongoDB DAL(`Peyk.Data.Mongo` project)
 - [`scripts/`]: CI/CD automation scripts(Node.js) for this service
 
 [Heroku Badge]: https://img.shields.io/badge/-demo-yellowgreen.svg?style=popout-square&logo=heroku&colorA=cccccc
