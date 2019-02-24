@@ -4,6 +4,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{886BE9A2-75E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.Federation.Web", "src\Peyk.Federation.Web\Peyk.Federation.Web.csproj", "{75CCB595-E7F0-49CE-BB09-F84B26B15BEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.Data.Entities", "src\Peyk.Data.Entities\Peyk.Data.Entities.csproj", "{FBE0988D-1BCD-4595-8599-B3F5028AF6C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.Data.Mongo", "src\Peyk.Data.Mongo\Peyk.Data.Mongo.csproj", "{D46CA7EB-1051-4724-8508-68260C46ACC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.Federation.Ops.Query", "src\Peyk.Federation.Ops.Query\Peyk.Federation.Ops.Query.csproj", "{048803C8-8446-4331-9744-2E4D0C4303F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.Matrix.Models", "src\Peyk.Matrix.Models\Peyk.Matrix.Models.csproj", "{5D42231F-5C33-4891-AAC5-4DE5D434D7F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -11,11 +19,31 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{75CCB595-E7F0-49CE-BB09-F84B26B15BEE} = {886BE9A2-75E8-4683-B52D-2F63BED1D7C1}
+		{FBE0988D-1BCD-4595-8599-B3F5028AF6C4} = {886BE9A2-75E8-4683-B52D-2F63BED1D7C1}
+		{D46CA7EB-1051-4724-8508-68260C46ACC0} = {886BE9A2-75E8-4683-B52D-2F63BED1D7C1}
+		{048803C8-8446-4331-9744-2E4D0C4303F3} = {886BE9A2-75E8-4683-B52D-2F63BED1D7C1}
+		{5D42231F-5C33-4891-AAC5-4DE5D434D7F2} = {886BE9A2-75E8-4683-B52D-2F63BED1D7C1}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{75CCB595-E7F0-49CE-BB09-F84B26B15BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{75CCB595-E7F0-49CE-BB09-F84B26B15BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75CCB595-E7F0-49CE-BB09-F84B26B15BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75CCB595-E7F0-49CE-BB09-F84B26B15BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE0988D-1BCD-4595-8599-B3F5028AF6C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE0988D-1BCD-4595-8599-B3F5028AF6C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE0988D-1BCD-4595-8599-B3F5028AF6C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE0988D-1BCD-4595-8599-B3F5028AF6C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46CA7EB-1051-4724-8508-68260C46ACC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46CA7EB-1051-4724-8508-68260C46ACC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46CA7EB-1051-4724-8508-68260C46ACC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46CA7EB-1051-4724-8508-68260C46ACC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{048803C8-8446-4331-9744-2E4D0C4303F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048803C8-8446-4331-9744-2E4D0C4303F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048803C8-8446-4331-9744-2E4D0C4303F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048803C8-8446-4331-9744-2E4D0C4303F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D42231F-5C33-4891-AAC5-4DE5D434D7F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D42231F-5C33-4891-AAC5-4DE5D434D7F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D42231F-5C33-4891-AAC5-4DE5D434D7F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D42231F-5C33-4891-AAC5-4DE5D434D7F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
