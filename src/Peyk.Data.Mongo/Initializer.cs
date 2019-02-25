@@ -1,6 +1,8 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 using Peyk.Data.Entities;
 
@@ -48,9 +50,19 @@ namespace Peyk.Data.Mongo
             {
                 BsonClassMap.RegisterClassMap<Room>(map =>
                 {
-                    map.AutoMap();
-                    map.MapProperty(r => r.NumJoinedMembers).SetElementName("members_count");
-                    map.MapProperty(r => r.CreatedAt).SetElementName("created_at");
+                    map.MapIdProperty(r => r.Id)
+                        .SetIdGenerator(UlidIdGenerator.Instance)
+                        .SetSerializer(new StringSerializer(BsonType.String));
+                    map.MapProperty(r => r.RoomId).SetElementName("roomId");
+                    map.MapProperty(r => r.Name).SetElementName("name");
+                    map.MapProperty(r => r.NumJoinedMembers).SetElementName("membersCount");
+                    map.MapProperty(r => r.WorldReadable).SetElementName("worldReadable");
+                    map.MapProperty(r => r.GuestCanJoin).SetElementName("guestCanJoin");
+                    map.MapProperty(r => r.Aliases).SetElementName("aliases");
+                    map.MapProperty(r => r.CanonicalAlias).SetElementName("canonicalAlias");
+                    map.MapProperty(r => r.Name).SetElementName("name");
+                    map.MapProperty(r => r.Topic).SetElementName("topic");
+                    map.MapProperty(r => r.AvatarUrl).SetElementName("avatarUrl");
                 });
             }
         }

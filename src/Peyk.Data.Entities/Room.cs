@@ -60,10 +60,5 @@ namespace Peyk.Data.Entities
         /// The URL for the room's avatar, if one is set.
         /// </summary>
         public string AvatarUrl { get; set; }
-
-        /// <summary>
-        /// The entity creations date
-        /// </summary>
-        public DateTime CreatedAt { get; set; }
     }
 }

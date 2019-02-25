@@ -2,8 +2,8 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using Peyk.Data.Abstractions;
 using Peyk.Data.Entities;
-using Peyk.Data.Mongo;
 using Peyk.Federation.Ops.Query.Models;
 using Peyk.Matrix.Models.CS;
 

@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
+using Peyk.Data.Abstractions;
 using Peyk.Data.Entities;
 
 namespace Peyk.Data.Mongo
@@ -34,6 +35,16 @@ namespace Peyk.Data.Mongo
                 .ConfigureAwait(false);
 
             return rooms;
+        }
+
+        /// <inheritdoc />
+        public async Task AddAsync(
+            Room room,
+            CancellationToken cancellationToken = default
+        )
+        {
+            await _collection.InsertOneAsync(room, cancellationToken: cancellationToken)
+                .ConfigureAwait(false);
         }
     }
 }

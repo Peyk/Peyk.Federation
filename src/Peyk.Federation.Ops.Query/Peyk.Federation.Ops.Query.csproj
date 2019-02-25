@@ -11,7 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Peyk.Data.Mongo\Peyk.Data.Mongo.csproj" />
+      <ProjectReference Include="..\Peyk.Data.Abstractions\Peyk.Data.Abstractions.csproj" />
       <ProjectReference Include="..\Peyk.Matrix.Models\Peyk.Matrix.Models.csproj" />
     </ItemGroup>
 </Project>
