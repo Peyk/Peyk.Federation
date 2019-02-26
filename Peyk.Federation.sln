@@ -2,13 +2,13 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{886BE9A2-75E8-4683-B52D-2F63BED1D7C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.Federation.Web", "src\Peyk.Federation.Web\Peyk.Federation.Web.csproj", "{75CCB595-E7F0-49CE-BB09-F84B26B15BEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.ClientServer.Web", "src\Peyk.ClientServer.Web\Peyk.ClientServer.Web.csproj", "{75CCB595-E7F0-49CE-BB09-F84B26B15BEE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.Data.Entities", "src\Peyk.Data.Entities\Peyk.Data.Entities.csproj", "{FBE0988D-1BCD-4595-8599-B3F5028AF6C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.Data.Mongo", "src\Peyk.Data.Mongo\Peyk.Data.Mongo.csproj", "{D46CA7EB-1051-4724-8508-68260C46ACC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.Federation.Ops.Query", "src\Peyk.Federation.Ops.Query\Peyk.Federation.Ops.Query.csproj", "{048803C8-8446-4331-9744-2E4D0C4303F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.ClientServer.Ops.Query", "src\Peyk.ClientServer.Ops.Query\Peyk.ClientServer.Ops.Query.csproj", "{048803C8-8446-4331-9744-2E4D0C4303F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.Matrix.Models", "src\Peyk.Matrix.Models\Peyk.Matrix.Models.csproj", "{5D42231F-5C33-4891-AAC5-4DE5D434D7F2}"
 EndProject

@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Peyk.Federation.Ops.Query;
-using Peyk.Federation.Web.Extensions;
+using Peyk.ClientServer.Ops.Query;
+using Peyk.ClientServer.Web.Extensions;
 
-namespace Peyk.Federation.Web
+namespace Peyk.ClientServer.Web
 {
     public class Startup
     {

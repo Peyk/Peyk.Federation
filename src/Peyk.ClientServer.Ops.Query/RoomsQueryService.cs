@@ -2,12 +2,12 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using Peyk.ClientServer.Ops.Query.Models;
 using Peyk.Data.Abstractions;
 using Peyk.Data.Entities;
-using Peyk.Federation.Ops.Query.Models;
 using Peyk.Matrix.Models.CS;
 
-namespace Peyk.Federation.Ops.Query
+namespace Peyk.ClientServer.Ops.Query
 {
     public class RoomsQueryService : IRoomsQueryService
     {

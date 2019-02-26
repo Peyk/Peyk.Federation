@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Peyk.Federation.Ops.Query;
+using Peyk.ClientServer.Ops.Query;
 
-namespace Peyk.Federation.Web.Controllers
+namespace Peyk.ClientServer.Web.Controllers
 {
     [Route("/_matrix/client/r0/publicRooms")]
     public class RoomsController : Controller

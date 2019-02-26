@@ -1,9 +1,9 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using Peyk.Federation.Ops.Query.Models;
+using Peyk.ClientServer.Ops.Query.Models;
 using Peyk.Matrix.Models.CS;
 
-namespace Peyk.Federation.Ops.Query
+namespace Peyk.ClientServer.Ops.Query
 {
     public interface IRoomsQueryService
     {

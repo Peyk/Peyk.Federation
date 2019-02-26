@@ -1,4 +1,4 @@
-namespace Peyk.Federation.Web.Options
+namespace Peyk.ClientServer.Web.Options
 {
     /// <summary>
     /// Contains application settings for connecting to a MongoDB database

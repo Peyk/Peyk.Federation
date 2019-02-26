@@ -47,8 +47,8 @@ curl -X GET "http://localhost:8008/_matrix/client/r0/publicRooms"
   - `Peyk.Data.Entities`: Peyk data entities persisted in the storage
   - `Peyk.Data.Abstractions`: Peyk entity repository interfaces (Repository Pattern)
   - `Peyk.Data.Mongo`: Peyk entity repository implementation for MongoDB
-  - `Peyk.Federation.Ops.Query`: Federation API operations for querying(read-only) data
-  - `Peyk.Federation.Web`: Web API implementation for the Federation HTTP protocol
+  - `Peyk.ClientServer.Ops.Query`: Client-Server API operations for querying(read-only) data
+  - `Peyk.ClientServer.Web`: Client-Server HTTP-based API implementation
 - `test/`
   - `Framework`: Contains a set of common utilities for the xUnit framework shared between the test projects
   - `MongoTests`: Systems integration tests for the MongoDB DAL(`Peyk.Data.Mongo` project)

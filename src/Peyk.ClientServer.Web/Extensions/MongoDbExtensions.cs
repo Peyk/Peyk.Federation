@@ -3,12 +3,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
 using MongoDB.Driver.Core.Configuration;
+using Peyk.ClientServer.Web.Options;
 using Peyk.Data.Abstractions;
 using Peyk.Data.Entities;
 using Peyk.Data.Mongo;
-using Peyk.Federation.Web.Options;
 
-namespace Peyk.Federation.Web.Extensions
+namespace Peyk.ClientServer.Web.Extensions
 {
     internal static class MongoDbExtensions
     {

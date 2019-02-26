@@ -14,7 +14,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Peyk.Federation.Web": {
+    "Peyk.ClientServer.Web": {
       "commandName": "Project",
       "applicationUrl": "https://localhost:8448;http://localhost:8447",
       "environmentVariables": {
