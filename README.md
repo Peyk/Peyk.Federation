@@ -45,9 +45,10 @@ curl -X GET "http://localhost:8008/_matrix/client/r0/publicRooms"
 - `src/`
   - `Peyk.Matrix.Models`: Contains the DTOs and the Entities in Matrix Protocol
   - `Peyk.Data.Entities`: Peyk data entities persisted in the storage
+  - `Peyk.Data.Entities.Converters`: Conversions between DTO and entity types
   - `Peyk.Data.Abstractions`: Peyk entity repository interfaces (Repository Pattern)
   - `Peyk.Data.Mongo`: Peyk entity repository implementation for MongoDB
-  - `Peyk.ClientServer.Ops.Query`: Client-Server API operations for querying(read-only) data
+  - `Peyk.ClientServer.Queries`: Client-Server API operations for querying(read-only) data
   - `Peyk.ClientServer.Web`: Client-Server HTTP-based API implementation
 - `test/`
   - `Framework`: Contains a set of common utilities for the xUnit framework shared between the test projects

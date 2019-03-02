@@ -12,7 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Peyk.ClientServer.Ops.Query\Peyk.ClientServer.Ops.Query.csproj" />
+      <ProjectReference Include="..\Peyk.ClientServer.Queries\Peyk.ClientServer.Queries.csproj" />
       <ProjectReference Include="..\Peyk.Data.Mongo\Peyk.Data.Mongo.csproj" />
     </ItemGroup>
 

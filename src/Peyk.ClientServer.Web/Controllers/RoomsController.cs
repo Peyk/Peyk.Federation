@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Peyk.ClientServer.Ops.Query;
+using Peyk.ClientServer.Queries;
 
 namespace Peyk.ClientServer.Web.Controllers
 {

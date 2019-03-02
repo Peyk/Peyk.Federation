@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard1.3</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Peyk.Data.Entities\Peyk.Data.Entities.csproj" />
+      <ProjectReference Include="..\Peyk.Matrix.Models\Peyk.Matrix.Models.csproj" />
+    </ItemGroup>
+
+</Project>

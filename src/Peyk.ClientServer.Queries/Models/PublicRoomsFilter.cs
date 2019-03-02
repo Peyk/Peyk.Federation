@@ -1,4 +1,4 @@
-namespace Peyk.ClientServer.Ops.Query.Models
+namespace Peyk.ClientServer.Queries.Models
 {
     public struct PublicRoomsFilter
     {
