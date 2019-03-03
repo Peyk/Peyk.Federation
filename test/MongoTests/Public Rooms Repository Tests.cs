@@ -26,7 +26,7 @@ namespace MongoTests
         [OrderedFact("should add the first room to the collection")]
         public async Task should_add_first_room()
         {
-            IPublicRoomsRepository publicRoomsRepo = new PublicRoomsRepository(
+            IRoomsRepository roomsRepo = new RoomsRepository(
                 _fxt.Database.GetCollection<Room>("rooms"),
                 default
             );
@@ -44,18 +44,18 @@ namespace MongoTests
                 GuestCanJoin = true,
             };
 
-            await publicRoomsRepo.AddAsync(newRoom);
+            await roomsRepo.AddAsync(newRoom);
         }
 
         [OrderedFact("should query the collection and get a single room document only")]
         public async Task should_get_one_single_room_only()
         {
-            IPublicRoomsRepository publicRoomsRepo = new PublicRoomsRepository(
+            IRoomsRepository roomsRepo = new RoomsRepository(
                 _fxt.Database.GetCollection<Room>("rooms"),
                 default
             );
 
-            IEnumerable<Room> allRooms = await publicRoomsRepo.GetRoomsAsync();
+            IEnumerable<Room> allRooms = await roomsRepo.GetRoomsAsync();
 
             Assert.NotNull(allRooms);
             Room room = Assert.Single(allRooms);

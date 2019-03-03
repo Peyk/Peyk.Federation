@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Peyk.Data.Abstractions\Peyk.Data.Abstractions.csproj" />
+        <ProjectReference Include="..\Peyk.Data.Entities.Converters\Peyk.Data.Entities.Converters.csproj" />
+        <ProjectReference Include="..\Peyk.Matrix.Models\Peyk.Matrix.Models.csproj" />
+    </ItemGroup>
+
+</Project>

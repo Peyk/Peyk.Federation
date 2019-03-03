@@ -8,10 +8,10 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.App" />
-        <PackageReference Include="NSec.Cryptography" Version="18.6.0" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Peyk.ClientServer.Commands\Peyk.ClientServer.Commands.csproj" />
       <ProjectReference Include="..\Peyk.ClientServer.Queries\Peyk.ClientServer.Queries.csproj" />
       <ProjectReference Include="..\Peyk.Data.Mongo\Peyk.Data.Mongo.csproj" />
     </ItemGroup>

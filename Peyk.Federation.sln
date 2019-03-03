@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.Data.Entities.Converte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppTests", "test\WebAppTests\WebAppTests.csproj", "{EE02B2E5-18AE-4132-AA13-19917FF735A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peyk.ClientServer.Commands", "src\Peyk.ClientServer.Commands\Peyk.ClientServer.Commands.csproj", "{6193498C-C0B0-4450-8555-10D6ED53FD5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,7 @@ Global
 		{1AF81C2C-3A3C-46E3-9FBA-C2DECABFD3D7} = {886BE9A2-75E8-4683-B52D-2F63BED1D7C1}
 		{D4AB52E9-7196-41EE-9929-0A2D18743668} = {886BE9A2-75E8-4683-B52D-2F63BED1D7C1}
 		{EE02B2E5-18AE-4132-AA13-19917FF735A0} = {20EC7A2B-F4C6-4A7F-A077-AEDCAD13ACC0}
+		{6193498C-C0B0-4450-8555-10D6ED53FD5C} = {886BE9A2-75E8-4683-B52D-2F63BED1D7C1}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{75CCB595-E7F0-49CE-BB09-F84B26B15BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -82,5 +85,9 @@ Global
 		{EE02B2E5-18AE-4132-AA13-19917FF735A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE02B2E5-18AE-4132-AA13-19917FF735A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE02B2E5-18AE-4132-AA13-19917FF735A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6193498C-C0B0-4450-8555-10D6ED53FD5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6193498C-C0B0-4450-8555-10D6ED53FD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6193498C-C0B0-4450-8555-10D6ED53FD5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6193498C-C0B0-4450-8555-10D6ED53FD5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

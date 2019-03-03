@@ -3,21 +3,22 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
+using NUlid;
 using Peyk.Data.Abstractions;
 using Peyk.Data.Entities;
 
 namespace Peyk.Data.Mongo
 {
-    public class PublicRoomsRepository : IPublicRoomsRepository
+    public class RoomsRepository : IRoomsRepository
     {
         private readonly IMongoCollection<Room> _collection;
         private readonly ILogger _logger;
         private FilterDefinitionBuilder<Room> Filter => Builders<Room>.Filter;
 
         /// <inheritdoc />
-        public PublicRoomsRepository(
+        public RoomsRepository(
             IMongoCollection<Room> collection,
-            ILogger<PublicRoomsRepository> logger
+            ILogger<RoomsRepository> logger
         )
         {
             _collection = collection;

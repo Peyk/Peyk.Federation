@@ -5,7 +5,7 @@ using Peyk.Data.Entities;
 
 namespace Peyk.Data.Abstractions
 {
-    public interface IPublicRoomsRepository
+    public interface IRoomsRepository
     {
         Task<IEnumerable<Room>> GetRoomsAsync(
             CancellationToken cancellationToken = default

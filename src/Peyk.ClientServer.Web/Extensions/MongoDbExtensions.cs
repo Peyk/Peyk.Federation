@@ -30,16 +30,16 @@ namespace Peyk.ClientServer.Web.Extensions
 
             string dbName = new ConnectionString(connectionString).DatabaseName;
             services.AddSingleton<IMongoClient, MongoClient>(_ => new MongoClient(connectionString));
-            services.AddTransient<IMongoDatabase>(provider =>
+            services.AddScoped<IMongoDatabase>(provider =>
                 provider.GetRequiredService<IMongoClient>().GetDatabase(dbName)
             );
 
-            services.AddTransient<IMongoCollection<Room>>(_ =>
+            services.AddScoped<IMongoCollection<Room>>(_ =>
                 _.GetRequiredService<IMongoDatabase>()
                     .GetCollection<Room>(Constants.Collections.Rooms.Name)
             );
 
-            services.AddTransient<IPublicRoomsRepository, PublicRoomsRepository>();
+            services.AddScoped<IRoomsRepository, RoomsRepository>();
 
             Initializer.RegisterClassMaps();
         }

@@ -5,17 +5,18 @@ using Peyk.ClientServer.Queries;
 namespace Peyk.ClientServer.Web.Controllers
 {
     [Route("/_matrix/client/r0/publicRooms")]
-    public class RoomsController : Controller
+    public class PublicRoomsController : Controller
     {
         private readonly IRoomsQueryService _roomsQueryService;
 
-        public RoomsController(
+        public PublicRoomsController(
             IRoomsQueryService roomsQueryService
         )
         {
             _roomsQueryService = roomsQueryService;
         }
 
+        [HttpGet]
         public async Task<IActionResult> Get(
             [FromQuery] string limit = default,
             [FromQuery] string since = default,

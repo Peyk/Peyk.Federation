@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Peyk.ClientServer.Commands;
 using Peyk.ClientServer.Queries;
 using Peyk.ClientServer.Web.Extensions;
 
@@ -23,7 +24,8 @@ namespace Peyk.ClientServer.Web
         {
             services.AddMongoDb(Configuration.GetSection("mongo"));
 
-            services.AddTransient<IRoomsQueryService, RoomsQueryService>();
+            services.AddScoped<IRoomsQueryService, RoomsQueryService>();
+            services.AddScoped<IRoomsCommandService, RoomsCommandService>();
 
             services.AddMvc();
 

@@ -12,11 +12,11 @@ namespace Peyk.ClientServer.Queries
 {
     public class RoomsQueryService : IRoomsQueryService
     {
-        private readonly IPublicRoomsRepository _roomsRepo;
+        private readonly IRoomsRepository _roomsRepo;
         private readonly ILogger _logger;
 
         public RoomsQueryService(
-            IPublicRoomsRepository roomsRepo,
+            IRoomsRepository roomsRepo,
             ILogger<RoomsQueryService> logger
         )
         {
