@@ -46,5 +46,21 @@ jobs:
           on:
             branch: master
 
+    - name: "Deploy EventStore"
+      script: skip
+      install:
+        - cd scripts && npm ci && cd ..
+        - docker pull peyk/eventstore
+      env:
+        # DEPLOY_SETTINGS_JSON='{"Production":[
+        #   {"type":"heroku","options":{"app":"peyk-eventstore","source":"peyk/eventstore","dyno":"web","user":"","token":""}}
+        # ]}'
+        - secure: YrX3RJfNOPxY8EzJUgQM5wwBSMQyiuq6SY73yMeL4FnO0uNgXEsnC4e367CKiI3cBAEDjARymgHg6j3t9yArly1a2C8LM1v4hbn3f6cT/xHmzkr2yVTErRP10zGRkTiw3M09XlPdrGJz0hCllPdR6/gFi4UNmYfIKVsNUvxglP8oD/HbLiY+iHZH8r97Rmws2rBOPSNnDrjESbwEPye7yPpf1MLpsLmu9+t7QYqm+7y4IkhnOXAPah4c/bI4YboPfyib5lqQ4It/WiCwKUuDUR7Vy0amTthcUhQjVSegXGM2Ov0tJLMV83W2r9R+FiuERpGmOw/pJIbFH7wVXV+ss/rzyH0crRgPm8OCDUI7qtgU25/+VWl1KPDZLCUD0wdtIHskDfT0kcAkhdUnaJdjLhtqqiAWg9NQc45eeQNxez+86Jcqx3cMn9bqiA8NVjbI0vbxNmhqyCDpzutf+prw8zI2oJIUlJYkWHx1flYX3HPg80yej3Y8zN+mjTWgkHwTHwI5Udy3VbUNwLsKQ7gM2LDD8vMIRU9Nldr+CLTfBzcBWtCT0Ra6LMSYcmt/7mxoiHOkVGDVz5Gi1//8PXdEH/8EQ9nsJJHIEX7znQ9InRwEMiA2sBX8dVdqZpBI3a3eOdH/KdWlxJVuh1cBL6Z/AgmbbbygW1RyjIyeNgwBQ9M=
+      deploy:
+        - provider: script
+          skip_cleanup: true
+          script: node scripts/deploy Production
+          on:
+            branch: master
 
 # Disable "Build pushed pull requests"

@@ -32,6 +32,14 @@ try {
         .
     `)
 
+    console.debug('building the event store image with "peyk-eventstore:latest" tag')
+    $.exec(`
+        docker                  \
+        build                   \
+        --tag peyk-eventstore   \
+        --target eventstore     \
+        .
+    `)
 
     console.debug('reading Docker deployment options')
     const docker_options = deploy_settings.get_docker_settings()
@@ -48,6 +56,13 @@ try {
         docker_deployment.deploy(
             'peyk-client-server:latest',
             'peyk/client-server:unstable',
+            docker_options.user,
+            docker_options.pass
+        )
+
+        docker_deployment.deploy(
+            'peyk-eventstore',
+            'peyk/eventstore',
             docker_options.user,
             docker_options.pass
         )

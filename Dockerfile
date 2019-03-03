@@ -1,3 +1,8 @@
+FROM eventstore/eventstore AS eventstore
+ENTRYPOINT [ ]
+CMD sed --in-place "s/2113/${PORT-2113}/" /etc/eventstore/eventstore.conf && /entrypoint.sh
+
+
 FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime-base
 WORKDIR /app/
 
