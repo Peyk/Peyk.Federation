@@ -22,7 +22,8 @@ namespace Peyk.ClientServer.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMongoDb(Configuration.GetSection("mongo"));
+            services.AddMongoDb(Configuration.GetSection("Mongo"));
+            services.AddEventStore(Configuration.GetSection("EventStore"));
 
             services.AddScoped<IRoomsQueryService, RoomsQueryService>();
             services.AddScoped<IRoomsCommandService, RoomsCommandService>();

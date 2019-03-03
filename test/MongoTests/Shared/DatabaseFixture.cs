@@ -16,7 +16,7 @@ namespace MongoTests.Shared
         /// </summary>
         static DatabaseFixture()
         {
-            Initializer.RegisterClassMaps();
+            MongoInitializer.RegisterClassMaps();
         }
 
         public DatabaseFixture()
@@ -40,7 +40,7 @@ namespace MongoTests.Shared
             await client.DropDatabaseAsync(connectionString.DatabaseName);
             var db = client.GetDatabase(connectionString.DatabaseName);
 
-            await Initializer.CreateSchemaAsync(db);
+            await MongoInitializer.CreateSchemaAsync(db);
 
             return db;
         }

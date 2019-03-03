@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Peyk.Data.Abstractions;
 using Peyk.Data.Entities;
+using Peyk.Data.Events;
 using Peyk.Matrix.Models.CS.Requests;
 using Peyk.Matrix.Models.CS.Responses;
 
@@ -13,14 +14,17 @@ namespace Peyk.ClientServer.Commands
     public class RoomsCommandService : IRoomsCommandService
     {
         private readonly IRoomsRepository _roomsRepo;
+        private readonly IEventsRepository _eventsRepo;
         private readonly ILogger _logger;
 
         public RoomsCommandService(
             IRoomsRepository roomsRepo,
+            IEventsRepository eventsRepo,
             ILogger<RoomsCommandService> logger
         )
         {
             _roomsRepo = roomsRepo;
+            _eventsRepo = eventsRepo;
             _logger = logger;
         }
 
@@ -41,6 +45,9 @@ namespace Peyk.ClientServer.Commands
             };
 
             await _roomsRepo.AddAsync(room, cancellationToken)
+                .ConfigureAwait(false);
+
+            await _eventsRepo.AppendEventAsync(new NewRoomCreatedEvent { Room = room }, cancellationToken)
                 .ConfigureAwait(false);
 
             return new CreatedRoomInfo

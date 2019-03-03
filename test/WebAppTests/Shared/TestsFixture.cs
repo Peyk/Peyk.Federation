@@ -40,8 +40,8 @@ namespace WebAppTests.Shared
         {
             var db = Services.GetRequiredService<IMongoDatabase>();
 
-            Initializer.RegisterClassMaps();
-            await Initializer.CreateSchemaAsync(db)
+            MongoInitializer.RegisterClassMaps();
+            await MongoInitializer.CreateSchemaAsync(db)
                 .ConfigureAwait(false);
         }
     }

@@ -13,6 +13,7 @@
     <ItemGroup>
       <ProjectReference Include="..\Peyk.ClientServer.Commands\Peyk.ClientServer.Commands.csproj" />
       <ProjectReference Include="..\Peyk.ClientServer.Queries\Peyk.ClientServer.Queries.csproj" />
+      <ProjectReference Include="..\Peyk.Data.EventStore\Peyk.Data.EventStore.csproj" />
       <ProjectReference Include="..\Peyk.Data.Mongo\Peyk.Data.Mongo.csproj" />
     </ItemGroup>
 

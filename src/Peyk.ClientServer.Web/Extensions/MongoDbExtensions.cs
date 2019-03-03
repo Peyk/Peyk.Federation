@@ -41,7 +41,7 @@ namespace Peyk.ClientServer.Web.Extensions
 
             services.AddScoped<IRoomsRepository, RoomsRepository>();
 
-            Initializer.RegisterClassMaps();
+            MongoInitializer.RegisterClassMaps();
         }
     }
 }

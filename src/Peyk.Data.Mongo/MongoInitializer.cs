@@ -11,7 +11,7 @@ namespace Peyk.Data.Mongo
     /// <summary>
     /// MongoDB initialization helper
     /// </summary>
-    public static class Initializer
+    public static class MongoInitializer
     {
         /// <summary>
         /// Creates the database schema
@@ -54,15 +54,16 @@ namespace Peyk.Data.Mongo
                         .SetIdGenerator(UlidIdGenerator.Instance)
                         .SetSerializer(new StringSerializer(BsonType.String));
                     map.MapProperty(r => r.RoomId).SetElementName("roomId");
-                    map.MapProperty(r => r.Name).SetElementName("name");
                     map.MapProperty(r => r.NumJoinedMembers).SetElementName("membersCount");
                     map.MapProperty(r => r.WorldReadable).SetElementName("worldReadable");
                     map.MapProperty(r => r.GuestCanJoin).SetElementName("guestCanJoin");
-                    map.MapProperty(r => r.Aliases).SetElementName("aliases");
-                    map.MapProperty(r => r.CanonicalAlias).SetElementName("canonicalAlias");
-                    map.MapProperty(r => r.Name).SetElementName("name");
-                    map.MapProperty(r => r.Topic).SetElementName("topic");
-                    map.MapProperty(r => r.AvatarUrl).SetElementName("avatarUrl");
+                    map.MapProperty(r => r.Name).SetElementName("name").SetIgnoreIfDefault(true);
+                    map.MapProperty(r => r.Aliases).SetElementName("aliases").SetIgnoreIfDefault(true);
+                    map.MapProperty(r => r.Topic).SetElementName("topic").SetIgnoreIfDefault(true);
+                    map.MapProperty(r => r.CanonicalAlias)
+                        .SetElementName("canonicalAlias").SetIgnoreIfDefault(true);
+                    map.MapProperty(r => r.AvatarUrl)
+                        .SetElementName("avatarUrl").SetIgnoreIfDefault(true);
                 });
             }
         }
