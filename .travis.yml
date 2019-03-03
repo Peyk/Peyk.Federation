@@ -32,14 +32,13 @@ jobs:
       script: skip
       install:
         - cd scripts && npm ci && cd ..
-        - docker pull peyk/federation:unstable
+        - docker pull peyk/client-server:unstable
       env:
         # DEPLOY_SETTINGS_JSON='{"Production":[
-        #   {"type":"docker","options":{"source":"peyk/federation:unstable","target":"peyk/federation","user":"","pass":""}},
-        #   {"type":"heroku","options":{"app":"peyk-federation","source":"peyk/federation","dyno":"web","user":"","token":""}}
+        #   {"type":"docker","options":{"source":"peyk/client-server:unstable","target":"peyk/client-server","user":"","pass":""}},
+        #   {"type":"heroku","options":{"app":"peyk-client-server","source":"peyk/client-server","dyno":"web","user":"","token":""}}
         # ]}'
-        - secure: KT208p1fcR1gYLMbOsubGnkOpzUU/vrvrhwkOZ8JmAjpwHodSIUMrPrZv+k2ayNeM+rjmz7JipK/Uunu+CZhdtHSTejsYOWp4Mn8lgBq0k3a6tnXzm+dBMDjJ/ZtyNenxNUxLyN3GZEN7cDY7B4m/NRkj1fUNfgK7eDkr2DoaYIMGIyedfKDTZEhejEY4aL4wyTwmEAC3UWIJRNhiVJWRea3efzntXbDT+964X38j8TDHlISCWsVC9VecM2KcXjscDaaqHxxBb5UQ/UjbiCRiJiRHKmp0lKcvqCRAPEqTeH2C64NVE6qiBpf6RFPQsIuMBZqgVreymo1nx7bTMNhPE6e28BL57JvR9P2FAzpDiXh/qrpnzQFmlDMZ5DDl7fIZ0A4AMgyd8LiP9hO7MhoDgIlU5JwJTO/FGnICCKR71kZwDfm7+eOCY7hpdFp37WMQ6MgjkB4egSxK8txmHs50LMC4jGyIjfM0yj6As3CcbX+uT3VqLBkh+wY2gyi5e8RbR2IllzwkQtg8BnuBXpOdKsqnf8sqLGrsAx7HO2LaFJcQ+NPGQTi6kjbShHr+QV5lFFOEqELkrCKp9XMmteoBhaFYguGRoGuUuNvCHjGcSM51zD+Cq6vdQNdy80Xtj9REBJu9JfX99rkw1PXyf5ChToh9l8feeUUrhwLK/bGJmY=
-
+        - secure: QoNNRGeirWvSQvFKuJMMssXfhDzOjylgwsivmaNDjL4Auo0o4dq39Ex+Ku51qD5gcw+qf8TyIXl+b1J4BFDiwz/9QfyAgBGIwlFqk1nHUjeaR45wNeANLSBmOany71F/tGgg7Nzg1SOpoxkEWm6tpI9/ZfraImXEibcLJnFu4KXWNshM2DA1m2EYinbIZqBm5x88AIccsnkTcuK2TEmKJluN8sqkoB28yBPNWlanYlPa6/jmPHswnawl14ayCGvqwKaVMrNcQ6sdeAaGKZZR6AFb2DPsewsubC2xt68hH0zg/qHNHes5HKBzEqw/lfgf3c82JzEdr20tJioyEWmrAc5WIocA8U3hrXZsjptyLN1Myfqyl76GkbwUVfDa1jNorAMIk4qz1f4OfEUM0cCfX1uiMkLjj21LQhrZ6WSArFjsbpoyheIkj+6mo2nrWAQ4wGFusDM6OkeFn/D9AdbiJSHfW5G7fknSD2yNM0EK0KFuEYVuHOxhy6r9Lqhqs91qBdjwVzp+11aWLS34VBakDxV6ja97vHz4HDe+CkoEOjZwgazDMFmPuSIpTgxsN0z4QCEGAS6r8ld3TNtajr0HC2izF/MLDX2pLfy2uabTJPuY7FFaIpyICzCahMB0NEd48js9m1Xlt23MtnpfIQBGDLF1U8jLW5BDhCx9cNEGCkw=
       deploy:
         - provider: script
           skip_cleanup: true

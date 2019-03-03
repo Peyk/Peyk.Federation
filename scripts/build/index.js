@@ -12,12 +12,12 @@ try {
 
     $.cd(root)
 
-    console.debug('building the final web app with "peyk-federation:latest" tag')
+    console.debug('building the final web app with "peyk-client-server:latest" tag')
     $.exec(`
-        docker                  \
-        build                   \
-        --tag peyk-federation   \
-        --target final          \
+        docker                          \
+        build                           \
+        --tag peyk-client-server        \
+        --target final-client-server    \
         .
     `)
 
@@ -46,8 +46,8 @@ try {
         )
 
         docker_deployment.deploy(
-            'peyk-federation:latest',
-            'peyk/federation:unstable',
+            'peyk-client-server:latest',
+            'peyk/client-server:unstable',
             docker_options.user,
             docker_options.pass
         )

@@ -3,6 +3,6 @@ configuration: Release
 before_build:
 - dotnet restore
 build:
-  project: Peyk.Federation.sln
+  project: Peyk.sln
   verbosity: normal
 test: off
