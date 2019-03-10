@@ -1,5 +1,4 @@
 using System;
-using EventStore.ClientAPI;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -19,19 +18,17 @@ namespace Peyk.ClientServer.Web.Extensions
             IConfigurationSection configSection
         )
         {
-            string connectionString = configSection.GetValue<string>(nameof(EventStoreOptions.ConnectionString));
-            if (string.IsNullOrWhiteSpace(connectionString))
-            {
-                throw new ArgumentException($@"Invalid EventStore connection string: ""{connectionString}"".");
-            }
-
             services.Configure<EventStoreOptions>(configSection);
 
-
-            services.AddScoped(provider =>
+            services.AddSingleton(provider =>
             {
-                var dataOptions = provider.GetRequiredService<IOptions<EventStoreOptions>>().Value;
-                return EventStoreConnection.Create(dataOptions.ConnectionString);
+                var options = provider.GetRequiredService<IOptions<EventStoreOptions>>().Value;
+                return new ConnectionConfigs
+                {
+                    Url = options.Url,
+                    User = options.Username,
+                    Password = options.Password,
+                };
             });
 
             services.AddScoped<IEventsRepository, EventsRepository>();

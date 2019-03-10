@@ -9,8 +9,4 @@
       <ProjectReference Include="..\Peyk.Data.Abstractions\Peyk.Data.Abstractions.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <PackageReference Include="EventStore.Client" Version="5.0.1" />
-    </ItemGroup>
-
 </Project>

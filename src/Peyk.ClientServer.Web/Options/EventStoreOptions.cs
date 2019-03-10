@@ -5,9 +5,10 @@ namespace Peyk.ClientServer.Web.Options
     /// </summary>
     public class EventStoreOptions
     {
-        /// <summary>
-        /// EventStore connection string
-        /// </summary>
-        public string ConnectionString { get; set; }
+        public string Url { get; set; }
+
+        public string Username { get; set; }
+
+        public string Password { get; set; }
     }
 }
