@@ -5,7 +5,7 @@ using Peyk.Matrix.Models.CS.Responses;
 
 namespace Peyk.ClientServer.Commands
 {
-    public interface IRoomsCommandService
+    public interface IRoomManager
     {
         Task<CreatedRoomInfo> CreateRoomsAsync(
             CreateRoomOptions options,

@@ -34,12 +34,16 @@ namespace Peyk.ClientServer.Web.Extensions
                 provider.GetRequiredService<IMongoClient>().GetDatabase(dbName)
             );
 
-            services.AddScoped<IMongoCollection<Room>>(_ =>
-                _.GetRequiredService<IMongoDatabase>()
-                    .GetCollection<Room>(Constants.Collections.Rooms.Name)
+            services.AddScoped<IMongoCollection<Room>>(provider =>
+                provider.GetRequiredService<IMongoDatabase>().GetCollection<Room>(Constants.Collections.Rooms.Name)
             );
-
             services.AddScoped<IRoomsRepository, RoomsRepository>();
+
+            services.AddScoped<IMongoCollection<Account>>(provider =>
+                provider.GetRequiredService<IMongoDatabase>()
+                    .GetCollection<Account>(Constants.Collections.Accounts.Name)
+            );
+            services.AddScoped<IAccountsRepository, AccountsRepository>();
 
             MongoInitializer.RegisterClassMaps();
         }

@@ -35,9 +35,18 @@ namespace Peyk.Data.Mongo
                     new CreateIndexModel<Room>(
                         Builders<Room>.IndexKeys.Ascending(r => r.RoomId),
                         new CreateIndexOptions
-                            {Name = Constants.Collections.Rooms.Indexes.RoomId, Unique = true}
+                            { Name = Constants.Collections.Rooms.Indexes.RoomId, Unique = true }
                     ), cancellationToken: cancellationToken
                 ).ConfigureAwait(false);
+            }
+
+            {
+                // "accounts" collection
+                await database
+                    .CreateCollectionAsync(Constants.Collections.Accounts.Name, cancellationToken: cancellationToken)
+                    .ConfigureAwait(false);
+
+                // ToDo create indices
             }
         }
 
@@ -64,6 +73,29 @@ namespace Peyk.Data.Mongo
                         .SetElementName("canonicalAlias").SetIgnoreIfDefault(true);
                     map.MapProperty(r => r.AvatarUrl)
                         .SetElementName("avatarUrl").SetIgnoreIfDefault(true);
+                });
+            }
+
+            if (!BsonClassMap.IsClassMapRegistered(typeof(Account)))
+            {
+                BsonClassMap.RegisterClassMap<Account>(map =>
+                {
+                    map.MapIdProperty(a => a.Id)
+                        .SetIdGenerator(UlidIdGenerator.Instance)
+                        .SetSerializer(new StringSerializer(BsonType.String));
+                    map.MapProperty(a => a.Username).SetElementName("user");
+                    map.MapProperty(a => a.kind).SetElementName("kind");
+                    map.MapProperty(a => a.Password).SetElementName("password");
+                    map.MapProperty(a => a.Tokens).SetElementName("tokens");
+                });
+            }
+
+            if (!BsonClassMap.IsClassMapRegistered(typeof(DeviceAccessToken)))
+            {
+                BsonClassMap.RegisterClassMap<DeviceAccessToken>(map =>
+                {
+                    map.MapProperty(t => t.DeviceId).SetElementName("device");
+                    map.MapProperty(t => t.AccessToken).SetElementName("token");
                 });
             }
         }

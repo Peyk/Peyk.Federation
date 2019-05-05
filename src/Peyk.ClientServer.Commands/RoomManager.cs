@@ -11,16 +11,16 @@ using Peyk.Matrix.Models.CS.Responses;
 
 namespace Peyk.ClientServer.Commands
 {
-    public class RoomsCommandService : IRoomsCommandService
+    public class RoomManager : IRoomManager
     {
         private readonly IRoomsRepository _roomsRepo;
         private readonly IEventsRepository _eventsRepo;
         private readonly ILogger _logger;
 
-        public RoomsCommandService(
+        public RoomManager(
             IRoomsRepository roomsRepo,
             IEventsRepository eventsRepo,
-            ILogger<RoomsCommandService> logger
+            ILogger<RoomManager> logger
         )
         {
             _roomsRepo = roomsRepo;

@@ -25,8 +25,11 @@ namespace Peyk.ClientServer.Web
             services.AddMongoDb(Configuration.GetSection("Mongo"));
             services.AddEventStore(Configuration.GetSection("EventStore"));
 
-            services.AddScoped<IRoomsQueryService, RoomsQueryService>();
-            services.AddScoped<IRoomsCommandService, RoomsCommandService>();
+            services.AddScoped<IRoomQueryService, RoomQueryService>();
+            services.AddScoped<IRoomManager, RoomManager>();
+
+            services.AddScoped<IAccountManager, AccountManager>();
+            services.AddScoped<IAuthManager, AuthManager>();
 
             services.AddMvc();
 
@@ -37,6 +40,7 @@ namespace Peyk.ClientServer.Web
         {
             if (env.IsDevelopment())
             {
+                app.SeedUsersAsync().GetAwaiter().GetResult();
                 app.UseDeveloperExceptionPage();
             }
 

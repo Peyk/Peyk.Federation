@@ -8,13 +8,13 @@ namespace Peyk.ClientServer.Web.Controllers
     [Route("/_matrix/client/r0/createRoom")]
     public class CreateRoomController : Controller
     {
-        private readonly IRoomsCommandService _roomsCommandService;
+        private readonly IRoomManager _roomManager;
 
         public CreateRoomController(
-            IRoomsCommandService roomsCommandService
+            IRoomManager roomManager
         )
         {
-            _roomsCommandService = roomsCommandService;
+            _roomManager = roomManager;
         }
 
         [HttpPost]
@@ -22,7 +22,7 @@ namespace Peyk.ClientServer.Web.Controllers
             [FromBody] CreateRoomOptions options = default
         )
         {
-            var response = await _roomsCommandService
+            var response = await _roomManager
                 .CreateRoomsAsync(options, HttpContext.RequestAborted);
 
             return Json(response);

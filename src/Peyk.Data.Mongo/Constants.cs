@@ -31,6 +31,14 @@ namespace Peyk.Data.Mongo
                     public const string RoomId = "room_id";
                 }
             }
+
+            public static class Accounts
+            {
+                /// <summary>
+                /// Collection's name
+                /// </summary>
+                public const string Name = "accounts";
+            }
         }
     }
 }

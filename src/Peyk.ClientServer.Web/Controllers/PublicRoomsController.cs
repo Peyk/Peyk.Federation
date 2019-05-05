@@ -7,13 +7,13 @@ namespace Peyk.ClientServer.Web.Controllers
     [Route("/_matrix/client/r0/publicRooms")]
     public class PublicRoomsController : Controller
     {
-        private readonly IRoomsQueryService _roomsQueryService;
+        private readonly IRoomQueryService _roomQueryService;
 
         public PublicRoomsController(
-            IRoomsQueryService roomsQueryService
+            IRoomQueryService roomQueryService
         )
         {
-            _roomsQueryService = roomsQueryService;
+            _roomQueryService = roomQueryService;
         }
 
         [HttpGet]
@@ -23,7 +23,7 @@ namespace Peyk.ClientServer.Web.Controllers
             [FromQuery] string server = default
         )
         {
-            var paginatedResponse = await _roomsQueryService
+            var paginatedResponse = await _roomQueryService
                 .GetPublicRoomsAsync(default, HttpContext.RequestAborted);
 
             return Json(paginatedResponse);

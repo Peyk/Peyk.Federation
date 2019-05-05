@@ -5,7 +5,7 @@ using Peyk.Matrix.Models.CS;
 
 namespace Peyk.ClientServer.Queries
 {
-    public interface IRoomsQueryService
+    public interface IRoomQueryService
     {
         Task<PublicRoomsPaginatedResponse> GetPublicRoomsAsync(
             PublicRoomsFilter filter,

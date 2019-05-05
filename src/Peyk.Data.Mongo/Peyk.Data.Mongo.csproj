@@ -7,7 +7,7 @@
 <ItemGroup>
     <PackageReference Include="NUlid" Version="1.3.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" />
-    <PackageReference Include="MongoDB.Driver" Version="2.7.3" />
+    <PackageReference Include="MongoDB.Driver" Version="2.8.0" />
 </ItemGroup>
 <ItemGroup>
   <ProjectReference Include="..\Peyk.Data.Abstractions\Peyk.Data.Abstractions.csproj" />
