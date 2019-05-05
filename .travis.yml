@@ -11,6 +11,7 @@ notifications:
 services:
   - docker
 
+
 jobs:
   include:
     - stage: Build
@@ -26,6 +27,14 @@ jobs:
       env:
         - image_tag=peyk/federation:unstable-solution
       script: echo ToDo
+
+    - name: "SonarQube Scan"
+      script: sonar-scanner
+      addons:
+        sonarcloud:
+          organization: peyk
+          token:
+            secure: kksP7XX6nXAfqO+vARzJgpviWGOCYiHLlcfruvdthXaMKYf1tQWI53WaAL5uq5pbAck8PQVxF3+9PkWwoUmFeZnsL2hmSbYxomY9Bk56z8uIYJ70AS+ysGkMFnqcs59qX0qOO9/jhl5rKY4gccWhNAPkeuYLL/2rx4vouukBcXqi9RwrFbhtGpS8Y0LXFqmfrUWqEsAtqSVlLCTMVsyo6OBrSrbGruJtBXYI8auyXT50KGIFBNr3u3WagccfdbOhrurR/PCy4Q3piK0SSeu4WE6aWotu3kh0TJ9WNja/T09H3b8hMQ+EnWGsN9e56C9xqNxlQG/OfurmuoONCXYX55mST+FXmWtVRFFAIEW4BiWUa1yBLGGF9IVfPcKKrRc+ufeSNZm8n2+jbh8d+csNvFStk9w9UrweaMMQYd3dTXYvro7rJ6jcqAGeHBtLQ4SFHTUpT1dMZQeMGucbVVtWlx0w/C2IoA/zF9ZYq4zVXrh7o6stCMCFIzg8WZivLwjyHNv3pppwe5UPYQiu9NXyPZz3ao2avoZwa+ad1RHudSTSEzMoJup0MUXt5OQ5+QrRRDuZE8SwkZZQl/lMObID+cT5Dxjoyn79gjLueCsYkfVQ5UV0bBYhgWZzVCMvMiFnbiZRunSH5MT6kJDBktYHCo3/Y5Is7usvF//sdG2c/g0=
 
     - stage: Deploy
       name: "Deploy"
