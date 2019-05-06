@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Serilog;
 
 namespace Peyk.ClientServer.Web
 {
@@ -12,6 +13,7 @@ namespace Peyk.ClientServer.Web
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseSerilog((context, config) => config.ReadFrom.Configuration(context.Configuration))
                 .UseStartup<Startup>();
     }
 }

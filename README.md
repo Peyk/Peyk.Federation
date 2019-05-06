@@ -39,6 +39,14 @@ npm run serve-dev
 curl -X GET "http://localhost:8008/_matrix/client/r0/publicRooms"
 ```
 
+```sh
+docker run --detach --name peyk-eventstore --publish 2113:2113 --publish 1113:1113 eventstore/eventstore
+
+docker run --name peyk-mongo --detach --publish 27017:27017 mongo
+
+docker run --detach --name peyk-elasticsearch --publish 9200:9200 --publish 9300:9300 --env 'discovery.type=single-node' elasticsearch:6.7.2
+```
+
 ## Repository Contents
 
 - `Peyk.Federation.sln`: .NET Solution
